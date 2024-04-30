@@ -185,7 +185,7 @@ func makeBatch(t *testing.T, l2Node *arbnode.Node, l2Info *BlockchainTestInfo, b
 func confirmLatestBlock(ctx context.Context, t *testing.T, l1Info *BlockchainTestInfo, backend arbutil.L1Interface) {
 	t.Helper()
 	// With SimulatedBeacon running in on-demand block production mode, the
-	// finalized block is considered to be be the nearest multiple of 32 less
+	// finalized block is considered to be the nearest multiple of 32 less
 	// than or equal to the block number.
 	for i := 0; i < 32; i++ {
 		SendWaitTestTransactions(t, ctx, backend, []*types.Transaction{

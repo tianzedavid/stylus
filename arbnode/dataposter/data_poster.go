@@ -468,7 +468,7 @@ func (p *DataPoster) evalMaxFeeCapExpr(backlogOfBatches uint64, elapsed time.Dur
 
 var big4 = big.NewInt(4)
 
-// The dataPosterBacklog argument should *not* include extraBacklog (it's added in in this function)
+// The dataPosterBacklog argument should *not* include extraBacklog (it's added in this function)
 func (p *DataPoster) feeAndTipCaps(ctx context.Context, nonce uint64, gasLimit uint64, numBlobs uint64, lastTx *types.Transaction, dataCreatedAt time.Time, dataPosterBacklog uint64, latestHeader *types.Header) (*big.Int, *big.Int, *big.Int, error) {
 	config := p.config()
 	dataPosterBacklog += p.extraBacklog()
